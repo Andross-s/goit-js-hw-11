@@ -16,6 +16,8 @@ form.addEventListener('submit', event => {
   const searchInput = form.querySelector('input[name="search-text"]');
   const searchQuery = searchInput.value.trim();
 
+  searchInput.value = '';
+
   if (!searchQuery) {
     iziToast.error({
       title: 'Error',
